@@ -12,8 +12,8 @@ const formatCurrency = (amount) => {
 export default function ProductCard({ product }) {
 
     return (
-        <div className="">
-            <article>
+        <div>
+            <article className="flex flex-col items-center">
                 <div>
                   <Image 
                   className="relative p-5"
@@ -30,7 +30,7 @@ export default function ProductCard({ product }) {
                   >{product.name}</p>    
                 </div>
 
-                <div className="flex justify-between px-10">
+                <div className="w-full flex justify-between px-40">
                   <button 
                   className="hover:cursor-pointer"
                   >

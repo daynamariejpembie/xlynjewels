@@ -26,6 +26,7 @@ export default function ProductFilter() {
         })
     
     return (
+      <div>
         <div className="flex gap-4 mb-6 flex-wrap">
             {categories.map((cat) => (
                 <button
@@ -41,11 +42,12 @@ export default function ProductFilter() {
                   {cat.name}
                 </button>
             ))}
-
+        </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {filteredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <ProductCard key={product.id} product={product} className="align-center" />
                 ))}
         </div>
-        </div>
+      </div>
+
     )};
