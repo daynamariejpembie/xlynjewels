@@ -1,4 +1,3 @@
-import { products } from "@/data/products";
 import Image from "next/image";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
@@ -10,18 +9,18 @@ const formatCurrency = (amount) => {
   }).format(amount);
 }
 
-export default function ProductCard() {
+export default function ProductCard({ product }) {
+
     return (
-        <div className="grid grid-cols-3">
-          {products.map(product => (
-            <article key={product.id}>
+        <div className="">
+            <article>
                 <div>
                   <Image 
-                  className="p-5"
+                  className="relative p-5"
                   src={product.image} 
                   alt={product.name} 
-                  width={400}
-                  height={400}
+                  width={200}
+                  height={200}
                   />
                 </div>
 
@@ -49,7 +48,7 @@ export default function ProductCard() {
                   </button>
                 </div>
             </article>
-          ))}
+
         </div>
     )
 }

@@ -1,6 +1,7 @@
-import ProductGrid from "@/components/products/ProductGrid";
 import Header from "@/components/layout/Header";
 import { NavBar } from "@/components/layout/NavBar/NavBar";
+import ProductFilter from "@/components/filter/ProductFilter";
+import { products } from "@/data/products";
 
 export default function Shop() {
   return (
@@ -8,7 +9,7 @@ export default function Shop() {
       <Header />
       <NavBar 
       />
-      <ProductGrid />
+      <ProductFilter products={products} />
     </div>
 );
 }
