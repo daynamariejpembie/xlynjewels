@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
+import { useCart } from "@/context/CartContext";
 
 const formatCurrency = (amount) => {
   return new Intl.NumberFormat("en-US",{
@@ -10,6 +11,7 @@ const formatCurrency = (amount) => {
 }
 
 export default function ProductCard({ product }) {
+  const { addToCart } = useCart();
 
     return (
         <div>
@@ -43,6 +45,7 @@ export default function ProductCard({ product }) {
 
                   <button
                   className="hover:cursor-pointer"
+                  onClick={() => addToCart(product)}
                   >
                     <FaCartShopping />
                   </button>
