@@ -1,7 +1,6 @@
 "use client"
 
-import { createContext, useContext, useState } from "react";
-import { IoIosHeartEmpty } from "react-icons/io";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const CartContext = createContext();
 
@@ -41,6 +40,17 @@ export function CartProvider({children}) {
     );
   };
 
+  // Persist Cart
+  useEffect(() => {
+    const savedCart = localStorage.getItem("cart");
+    if (savedCart) {
+        setCart(JSON.parse(savedCart))
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
   return (
     <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity }}>
         {children}

@@ -1,6 +1,8 @@
 "use client"
 import { useCart } from "@/context/CartContext";
 import Image from "next/image";
+import { GoTrash } from "react-icons/go";
+import { formatCurrency } from "@/utils/formatCurrency";
 
 export default function Cart() {
   const { cart, removeFromCart, updateQuantity } = useCart();
@@ -20,13 +22,13 @@ export default function Cart() {
       <div key={item.id}>
         <Image src={item.image} width={200} height={200} alt={item.name} />
         <h2>{item.name}</h2>
-        <p>{item.price}</p>
+        <p>{formatCurrency(item.price)}</p>
 
         <button onClick={() => updateQuantity(item.id, -1)}>-</button>
         <span>{item.quantity}</span>
         <button onClick={() => updateQuantity(item.id, 1)}>+</button>
 
-        <button onClick={() => removeFromCart(item.id)}></button>
+        <button onClick={() => removeFromCart(item.id)}><GoTrash/></button>
       </div>
     ))}
 

@@ -2,15 +2,12 @@ import Image from "next/image";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
 import { useCart } from "@/context/CartContext";
+import { formatCurrency } from "@/utils/formatCurrency";
 
-const formatCurrency = (amount) => {
-  return new Intl.NumberFormat("en-US",{
-    style: "currency",
-    currency: "USD",
-  }).format(amount);
-}
+
 
 export default function ProductCard({ product }) {
+
   const { addToCart } = useCart();
 
     return (
