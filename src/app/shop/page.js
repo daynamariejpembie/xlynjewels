@@ -5,7 +5,7 @@ import { products } from "@/data/products";
 
 export default function Shop() {
   return (
-    <div>
+    <div className="bg-[#C2A27A] w-full min-h-screen">
       <Header />
       <NavBar 
       />

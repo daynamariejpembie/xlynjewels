@@ -11,11 +11,11 @@ export default function ProductCard({ product }) {
   const { addToCart } = useCart();
 
     return (
-        <div>
-            <article className="flex flex-col items-center">
+        <div className="px-15 w-full h-full md:p-0 md:h-fit">
+            <article className="flex flex-col items-center border-2 border-[#f4d4ad] rounded-lg h-fit p-5 md:p-10">
                 <div>
                   <Image 
-                  className="relative p-5"
+                  className="relative p-5 w-40 md:w-80 md:p-0"
                   src={product.image} 
                   alt={product.name} 
                   width={200}
@@ -25,11 +25,11 @@ export default function ProductCard({ product }) {
 
                 <div>
                   <p
-                  className="text-2xl flex justify-center"
+                  className="text-lg flex justify-center p-2 md:text-2xl"
                   >{product.name}</p>    
                 </div>
 
-                <div className="w-full flex justify-between px-40">
+                <div className="w-full flex justify-between align-center p-4 bg-[#f4d4ad] rounded-2xl text-sm md:justify-around md:p-6 md:text-lg">
                   <button 
                   className="hover:cursor-pointer"
                   >

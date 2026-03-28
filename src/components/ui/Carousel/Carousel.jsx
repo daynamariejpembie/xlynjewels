@@ -5,17 +5,17 @@ import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from 'react-icons/bs';
 
 const slides = [
     {
-        src: "https://i.etsystatic.com/37953348/r/il/f907ba/4518081077/il_fullxfull.4518081077_g9gt.jpg",
-        alt: 'Sister Earrings'
+        src: "/dark-logo.jpg",
+        alt: 'Sza Anklet'
 
     },
     {
-        src: "https://imgs.michaels.com/MAM/assets/1/5E3C12034D34434F8A9BAAFDDF0F8E1B/img/63B7355BE2EA465197ACD69AF7AB2179/B_88780_1.gif",
+        src: "/sza-anklet.png",
         alt: "Pearl Bracelet"
 
     },
     {
-        src: "https://soflojewels.com/cdn/shop/products/FA7B8D41-BC0E-4C6B-83EE-3E7D90601C96.jpg?v=1668561347&width=3024",
+        src: "/pn-heart.png",
         alt: "Birthstone Bracelet"
 
     }
