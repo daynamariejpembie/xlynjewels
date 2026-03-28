@@ -5,7 +5,7 @@ import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from 'react-icons/bs';
 
 const slides = [
     {
-        src: "/dark-logo.jpg",
+        src: "/dark-logo.JPG",
         alt: 'Sza Anklet'
 
     },
@@ -15,7 +15,7 @@ const slides = [
 
     },
     {
-        src: "/pn-heart.png",
+        src: "/pn-heart.PNG",
         alt: "Birthstone Bracelet"
 
     }
