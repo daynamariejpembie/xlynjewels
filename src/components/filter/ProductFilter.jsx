@@ -27,15 +27,15 @@ export default function ProductFilter() {
     
     return (
       <div>
-        <div className="flex gap-4 mb-6 flex-wrap">
+        <div className="flex gap-4 mb-6 flex-wrap justify-center md:text-xl lg:text-2xl">
             {categories.map((cat) => (
                 <button
                   key={cat.name}
                   onClick={() => setCategory(cat.name)}
                   className={`flex border-2 items-center rounded-full capitalize transition gap-2 px-4 py-2 ${
                     category === cat.name
-                    ? "bg-black text-white"
-                    : "hover:bg-gray-100"
+                    ? "bg-black text-[#f4d4ad]"
+                    : "hover:bg-[#f4d4ad]"
                   }`}
                 >
                   {cat.icon}
@@ -43,7 +43,7 @@ export default function ProductFilter() {
                 </button>
             ))}
         </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10 p-4 xl:w-fit">
               {filteredProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
                 ))}
